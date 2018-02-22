@@ -1358,7 +1358,7 @@ void DrawMenu()
 
 	if (firsttime)
 	{
-		if (Build == 13617)
+		if (Build == 13627)
 		{
 			SetupMenu();
 			firsttime = false;
