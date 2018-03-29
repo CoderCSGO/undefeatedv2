@@ -999,7 +999,7 @@ public:
 
 	float NextPrimaryAttack()
 	{
-		static int m_flNextPrimaryAttack = Netvar(("DT_BaseCombatWeapon"), ("LocalActiveWeaponData"), ("m_flNextPrimaryAttack"));
+		static int m_flNextPrimaryAttack = Netvar(("DT_BaseCombatWeapon"), ("LocalActive"), ("m_flNextPrimaryAttack"));
 		return GetFieldValue< float >( m_flNextPrimaryAttack );
 	}
 
@@ -1106,7 +1106,7 @@ public:
 
 	void CBaseCombatWeapon::UpdateAccuracyPenalty() {
 		typedef void(__thiscall* OriginalFn)(void*);
-		getvfunc<OriginalFn>(this, 470)(this);//485 
+		getvfunc<OriginalFn>(this, 471)(this);//485 
 	}
 	float& CBaseCombatWeapon::GetAccuracyPenalty() {
 		static int m_fAccuracyPenalty = Netvar(("DT_WeaponCSBase"), ("m_fAccuracyPenalty"));
@@ -1118,7 +1118,7 @@ public:
 		if (!this)
 			return 0.f;
 		typedef float(__thiscall* OriginalFn)(void*);
-		return getvfunc<OriginalFn>(this, 469)(this);//483 
+		return getvfunc<OriginalFn>(this, 470)(this);//483 
 	}
 
 	float CBaseCombatWeapon::GetSpread() {
@@ -1641,7 +1641,7 @@ public:
 	{
 		if (!this) return nullptr;
 		typedef CCSWeaponInfo*(__thiscall* OriginalFn)(void*);
-		return  getvfunc<OriginalFn>(this, 446)(this);
+		return  getvfunc<OriginalFn>(this, 447)(this);
 	}
 };
 
